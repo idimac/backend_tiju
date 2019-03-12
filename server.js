@@ -1,6 +1,7 @@
 import express from 'express';
 import session from 'express-session';
 import bodyParser from 'body-parser';
+import configureRouter from './controllers';
 
 import config from './config';
 
@@ -14,9 +15,6 @@ app.listen(config.port, (err) => {
     }
 })
 
-app.post('/', (req, res) => {
-    res.send('Nodemon works')
-})
 
 app.use(bodyParser.json());         //this middleware handles POST request bodies
 app.use(session({                   //this middleware saves sessions information on server and coockies
@@ -24,3 +22,4 @@ app.use(session({                   //this middleware saves sessions information
     saveUninitialized: true,
     secret: config.secret,
   }));
+app.use('/', configureRouter());
