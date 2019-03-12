@@ -1,0 +1,12 @@
+{
+  "name": "tijubackend",
+  "version": "1.0.0",
+  "description": "backend server side of tiju art shop",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "Dmitry Shlyahov",
+  "license": "ISC"
+}
