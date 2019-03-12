@@ -12,3 +12,10 @@ app.listen(config.port, (err) => {
         console.log(`server is listening on port ${config.port}`)
     }
 })
+
+app.use(bodyParser.json());         //this middleware handles POST request bodies
+app.use(session({                   //this middleware saves sessions information on server and coockies
+    resave: true,
+    saveUninitialized: true,
+    secret: config.secret,
+  }));
