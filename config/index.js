@@ -1,8 +1,8 @@
 const config = {
   database: 'tiju',
-  user: 'admin',
+  user: 'root',
   port: 3000,
-  secret: 'tijusecret',
+  secret: 'my-secret-pw',
 };
 
 export default config;
